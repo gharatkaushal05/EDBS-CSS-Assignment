@@ -1,0 +1,31 @@
+.parent-box {
+    width: 500px;
+    height: 500px;
+    border: 5px solid #000;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.child-box {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotateChild 10s linear infinite;
+}
+
+@keyframes rotateChild {
+    0%, 100% {
+        transform: rotate(0deg) translate(225px) rotate(0deg) translate(-50%, -50%);
+    }
+    50% {
+        transform: rotate(360deg) translate(225px) rotate(-360deg) translate(-50%, -50%);
+    }
+}
